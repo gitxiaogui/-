@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首 页",
+        "iconPath": "/images/tab/basics.png",
+        "selectedIconPath": "/images/tab/basics_cur.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "列 表",
+        "iconPath": "/images/tab/component.png",
+        "selectedIconPath": "/images/tab/component_cur.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我 的",
+        "iconPath": "/images/tab/about.png",
+        "selectedIconPath": "/images/tab/about_cur.png"
+      }
+    ]
+  }
+}

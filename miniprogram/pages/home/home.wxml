@@ -1,0 +1,75 @@
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{4}}" wx:key>
+    <image src="https://image.weilanwl.com/img/4x3-{{index+1}}.jpg" mode='aspectFill'></image>
+    <!-- <image src="{{item.imgUrl}}" mode='aspectFill'></image> -->
+  </swiper-item>
+</swiper>
+<scroll-view scroll-x class="bg-white nav">
+  <view class='flex text-center'>
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{4}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{tabList[index]}}
+    </view>
+  </view>
+</scroll-view>
+<view wx:if='{{ TabCur==0 }}'>
+  <view calss="focus">
+    <view class='focusList' wx:for="{{focusList}}">
+      <image src='{{item.imgUrl}}'></image>
+      <view class='content'>
+        <text class='name'>名称：{{item.userName}}</text>
+        <text class='state'>介绍：{{item.state}}</text>
+        <text class='address'>地址：{{item.address}}</text>
+        
+      </view>
+      <view class='margin-tb-sm text-center'>
+        <button style='width:130rpx;' data-id="{{item._id}}" class='cu-btn round line-red button-hover' bindtap='delete1'>删除</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if='{{ TabCur==1 }}'>
+  <view calss="focus">
+    <view class='focusList' wx:for="{{focusList}}">
+      <image src='{{item.imgUrl}}'></image>
+      <view class='content'>
+        <text class='name'>名称：{{item.userName}}</text>
+        <text class='state'>介绍：{{item.state}}</text>
+        <text class='address'>地址：{{item.address}}</text>
+      </view>
+      <view class='margin-tb-sm text-center'>
+        <button style='width:130rpx;' data-id="{{item._id}}" class='cu-btn round line-red button-hover' bindtap='delete1'>删除</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if='{{ TabCur==2 }}'>
+  <view calss="focus">
+    <view class='focusList' wx:for="{{focusList}}">
+      <image src='{{item.imgUrl}}'></image>
+      <view class='content'>
+        <text class='name'>名称：{{item.userName}}</text>
+        <text class='state'>介绍：{{item.state}}</text>
+        <text class='address'>地址：{{item.address}}</text>
+      </view>
+      <view class='margin-tb-sm text-center'>
+        <button style='width:130rpx;' data-id="{{item._id}}" class='cu-btn round line-red button-hover' bindtap='delete1'>删除</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if='{{ TabCur==3 }}'>
+  <view calss="focus">
+    <view class='focusList' wx:for="{{focusList}}">
+      <image src='{{item.imgUrl}}'></image>
+      <view class='content'>
+        <text class='name'>名称：{{item.userName}}</text>
+        <text class='state'>介绍：{{item.state}}</text>
+        <text class='address'>地址：{{item.address}}</text>
+      </view>
+      <view class='margin-tb-sm text-center'>
+        <button style='width:130rpx;' data-id="{{item._id}}" class='cu-btn round line-red button-hover' bindtap='delete1'>删除</button>
+      </view>
+    </view>
+  </view>
+</view>
+

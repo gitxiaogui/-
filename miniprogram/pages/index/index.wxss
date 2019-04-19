@@ -1,0 +1,33 @@
+.focusList{
+  border:1rpx solid #ccc;
+  padding:10rpx;
+  margin:16rpx;
+  display: flex;
+}
+.focusList image{
+  width:220rpx;
+  height:200rpx;
+}
+.focusList .content{
+  margin-left:30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.focusList .content text{
+  margin-bottom:10rpx;
+}
+.focusList .content .name{
+  font-size:40rpx;
+  color:#f00;
+  width:400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.focusList .content .state{
+  width:400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:cornflowerblue;
+}

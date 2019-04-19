@@ -1,0 +1,19 @@
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <view class='content' style='top:{{StatusBar}}px;'>列表</view>
+  </view>
+</view>
+
+<view>
+  <view wx:for="{{list}}">{{item.name}}</view>
+</view>
+<view calss="focus">
+    <view class='focusList' wx:for="{{list}}">
+      <image src='{{item.imgUrl}}'></image>
+      <view class='content'>
+        <text class='name'>名称：{{item.userName}}</text>
+        <text class='state'>介绍：{{item.state}}</text>
+        <text class='address'>地址：{{item.address}}</text>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,13 @@
+/* miniprogram/pages/user/user.wxss */
+.showImg{
+  height:100rpx;
+  width:100rpx;
+}
+.updataImg{
+  position: relative;
+}
+.updataImg .uploader__input{
+  position: absolute;
+  height:100%;
+  width:100%;
+}
