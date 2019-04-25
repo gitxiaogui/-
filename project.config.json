@@ -45,7 +45,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -64,6 +64,34 @@
 					"id": -1,
 					"name": "user",
 					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "需求",
+					"pathName": "pages/need/need",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "发布需求",
+					"pathName": "pages/need/issueNeed/issueNeed",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布成功",
+					"pathName": "pages/need/issueSuccess/issueSuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的需求",
+					"pathName": "pages/user/myNeed/myNeed",
 					"query": "",
 					"scene": null
 				}

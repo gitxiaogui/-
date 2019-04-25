@@ -1,0 +1,158 @@
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text> 发布需求
+    </navigator>
+  </view>
+</view>
+<view id='issueForm'>
+  <view class='inputWrap'>
+    <view class='hintTitle'>
+      <text class='hint'></text>
+      <text class='title'>项目名称</text>
+    </view>
+    <view class='input'>
+      <text class='state'>请输入简介的项目名称以获得更多的关注</text>
+      <input placeholder='30个字符以内' maxlength='30' value="{{form.itemName}}" bindinput='getItemName' placeholder-style="color:#ccc;"></input>
+    </view>
+  </view>
+  <view class='inputWrap'>
+      <view class='hintTitle'>
+        <text class='hint'></text>
+        <text class='title'>服务对象</text>
+      </view>
+      <view class='input'>
+        <text class='state'>请选择需要服务的对象</text>
+        <view class="cu-form-group margin-top">
+          <view class='title'>普通选择</view>
+          <picker bindchange="bindPickerChange" value="{{arrayIndex}}" range="{{array}}">
+          <view class="picker">{{array[arrayIndex]}}</view>
+        </picker>
+        </view>
+      </view>
+  </view>
+  <view class='inputWrap'>
+      <view class='hintTitle'>
+        <text class='hint'></text>
+        <text class='title'>专业领域</text>
+      </view>
+      <view class='input'>
+        <text class='state'>请选择您的专业领域，最多三项</text>
+        <checkbox-group class='checkboxBox' bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{checkList}}" wx:key>
+            <checkbox value="{{item.name}}" disabled='{{item.disabled}}' />
+            {{item.name}}
+          </label>
+        </checkbox-group>
+      </view>
+  </view>
+  <view class='inputWrap'>
+      <view class='hintTitle'>
+        <text class='hint'></text>
+        <text class='title'>所属行业</text>
+      </view>
+      <view class='input'>
+        <text class='state'>请选择需要的所属行业</text>
+        <view class="cu-form-group margin-top">
+          <view class='title'>请选择行业</view>
+          <picker bindchange="bindPickerGuild" value="{{guildIndex}}" range="{{guild}}">
+            <view class="picker">{{guild[guildIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+  </view>
+  <view class='inputWrap'>
+      <view class='hintTitle'>
+        <text class='hint'></text>
+        <text class='title'>实施地点</text>
+      </view>
+      <view class='input'>
+        <text class='state'>请选择实施地点</text>
+        <view class="cu-form-group">
+        <view class='title'>请选择地址</view>
+          <picker mode="region" bindchange="addressChange" value="{{form.address}}" custom-item="{{customItem}}">
+            <view class="picker">
+              {{form.address[0]}}，{{form.address[1]}}，{{form.address[2]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+  </view>
+  <view class='inputWrap'>
+    <view class='hintTitle'>
+      <text class='hint'></text>
+      <text class='title'>实施时间</text>
+    </view>
+    <view class='input'>
+      <text class='state'>请选择您的起始时间及终止时间</text>
+      <view class="cu-form-group">
+        <view class='title'>开始时间</view>
+        <picker mode="date" value="{{form.startDate}}" start="2015-09-01" end="2020-09-01" bindchange="startDateChange">
+          <view class="picker">
+            {{form.startDate}}
+          </view>
+        </picker>
+      </view>
+      <view class="cu-form-group">
+        <view class='title'>结束时间</view>
+        <picker mode="date" value="{{form.endDate}}" start="2015-09-01" end="2020-09-01" bindchange="endDateChange">
+          <view class="picker">
+            {{form.endDate}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='inputWrap'>
+    <view class='hintTitle'>
+      <text class='hint'></text>
+      <text class='title'>需求描述</text>
+    </view>
+    <view class='input'>
+      <text class='state'>请简单描述下您的项目</text>
+        <view class="cu-form-group margin-top cu-form-textarea" wx:hide="{{modalName==null}}">
+        <textarea bindinput='getStateItem' placeholder="多行文本输入框" value="{{form.stateItem}}" maxlength="-1" disabled="{{modalName!=null}}" placeholder-class='placeholder'></textarea>
+      </view>
+    </view>
+  </view>
+  <view class='inputWrap inputWrapUser'>
+    <view class='hintTitle'>
+      <text class='hint'></text>
+      <text class='title'>联系人</text>
+    </view>
+    <view class='input'>
+      <input class='inputCon' bindinput='getUserName' placeholder='30个字符以内' value="{{form.userName}}" maxlength='30' placeholder-style="color:#ccc;"></input>
+    </view>
+  </view>
+  <view class='inputWrap'>
+    <view class='hintTitle'>
+      <text class='hint'></text>
+      <text class='title'>手机号</text>
+    </view>
+    <view class='input'>
+      <input class='inputCon' bindinput='getUserPhone' placeholder='请输入手机号' value="{{form.userPhone}}" maxlength='11' placeholder-style="color:#ccc;"></input>
+    </view>
+  </view>
+  <view class='inputWrap'>
+    <view class='hintTitle'>
+      <text class='hint'></text>
+      <text class='title'>所在公司</text>
+    </view>
+    <view class='input'>
+      <input class='inputCon' bindinput='getUserFirm' placeholder='请输入您的公司' value="{{form.userFirm}}" maxlength='10' placeholder-style="color:#ccc;"></input>
+    </view>
+  </view>
+  <view class='inputWrap'>
+    <view class='hintTitle'>
+      <text class='hint'></text>
+      <text class='title'>部门职务</text>
+    </view>
+    <view class='input'>
+      <input class='inputCon' bindinput='getUserSection' placeholder='请输入您的部门职务' value="{{form.userSection}}" maxlength='8' placeholder-style="color:#ccc;"></input>
+    </view>
+  </view>
+  <view class="padding flex flex-direction">
+    <button bindtap='submitForm' class='cu-btn bg-blue margin-tb-sm lg'>提交</button>
+    <button class='cu-btn margin-tb-sm lg kong' >重置</button>
+  </view>
+</view>

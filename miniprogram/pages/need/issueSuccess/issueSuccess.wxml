@@ -1,0 +1,15 @@
+<view id='issueSuccess'>
+  <view class="cu-custom" style="height:{{CustomBar}}px;">
+    <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+      <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+        <text class='icon-back'></text>发布成功
+      </navigator>
+    </view>
+  </view>
+  <view class="group">
+    <text class='icon-roundcheckfill lg text-gray iconSuccess'></text>
+  </view>
+  <view class="padding flex flex-direction">
+    <button bindtap='goBack' class='cu-btn bg-blue margin-tb-sm lg'>返回首页</button>
+  </view>
+</view>

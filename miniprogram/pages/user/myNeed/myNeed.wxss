@@ -1,0 +1,56 @@
+/* miniprogram/pages/user/myNeed/myNeed.wxss */
+#myNeed .list{
+  padding:0 20rpx 0 10rpx;
+  background: #fff;
+  margin:20rpx 0;
+}
+#myNeed .list .li{
+  display: flex;
+  height:180rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 10rpx 0;
+}
+#myNeed .list .li .left{
+  position: relative;
+  height:160rpx;
+  width:160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  margin-right:20rpx;
+}
+#myNeed .list .li .left .lg{
+  position: absolute;
+  font-size:160rpx;
+  display: block;
+  left:0;
+  top:0;
+
+}
+#myNeed .list .li .left view{
+  position: relative;
+  color:#000;
+  font-size:30rpx;
+  font-weight:bold;
+}
+#myNeed .list .li .right{
+  flex: 1;
+  padding:6rpx 0;
+}
+#myNeed .list .li .right .title{
+  height:74rpx;
+  color:#333;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+#myNeed .list .li .right .time{
+  font-size:24rpx;
+  color:#aaa;
+}
+#myNeed .list .li .right .time:nth-of-type(1){
+  margin-bottom:4rpx;
+}

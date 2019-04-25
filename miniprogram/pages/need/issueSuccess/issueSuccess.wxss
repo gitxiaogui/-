@@ -1,0 +1,11 @@
+/* miniprogram/pages/need/issueSuccess/issueSuccess.wxss */
+#issueSuccess .group{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+#issueSuccess .group .iconSuccess{
+  margin:100rpx 0 20rpx;
+  font-size:200rpx;
+  color:#21C421
+}

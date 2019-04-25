@@ -1,0 +1,17 @@
+<view class='cu-custom' style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <view class='content' style='top:{{StatusBar}}px;'>需求</view>
+  </view>
+</view>
+<view id='need'>
+  <view class='needList'>
+  <view class='listLi' wx:for="{{list}}" data-id='{{item.id}}' wx:key bindtap='clickLi'>
+    <!-- <image src='http://img.17kuxiu.com/banner/banner20190313154655.jpg'></image> -->
+    <view class='iconWrap'>
+      <text class='icon-{{item.icon}} lg text-gray icon' style='color:{{item.color}}'></text>
+    </view>
+    <text class='name'>{{item.name}}</text>
+  </view>
+  
+</view>
+</view>

@@ -1,0 +1,28 @@
+<view id="myNeed">
+  <view class="cu-custom" style="height:{{CustomBar}}px;">
+    <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+      <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+        <text class='icon-back'></text> 我的需求
+      </navigator>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='li' wx:for='{{ needList }}' wx:key>
+      <view class='left'>
+        <image style='height:160rpx;width:160rpx;' src='../../images/2.gif'></image>
+      </view>
+      <view class='right'>
+        <text class='title'>{{item.itemName}}</text>
+        <view class='time'>
+          <text class='icon-form lg text-gray'></text>
+          <text>发布时间：{{item.createdTime}}</text>
+        </view>
+        <view class='time'>
+          <text class='icon-form lg text-gray'></text>
+          <text>发布者：{{item.userName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

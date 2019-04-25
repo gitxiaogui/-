@@ -35,7 +35,6 @@ App({
     
     // 获取系统状态栏信息
     wx.getSystemInfo({
-      
       success: e => {
         this.globalData.StatusBar = e.statusBarHeight;
         let custom = wx.getMenuButtonBoundingClientRect();
@@ -43,6 +42,19 @@ App({
         this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
       }
     })
+    this.list = [
+      { icon: 'form', name: '整体方案', id: '1', color: '#D6D125' },
+      { icon: 'remind', name: '公开课', id: '2', color: '#C46363' },
+      { icon: 'brandfill', name: '机构内训', id: '3', color: '#8BCE1D' },
+      { icon: 'servicefill', name: '自有讲师', id: '4', color: '#2DB959' },
+      { icon: 'paint', name: '课程开发', id: '5', color: '#2F49B7' },
+      { icon: 'colorlens', name: '电子课件', id: '6', color: '#0E5128' },
+      { icon: 'profilefill', name: '在线平台', id: '7', color: '#CD5BC3' },
+      { icon: 'taoxiaopu', name: '人才测评', id: '8', color: '#21C0C4' },
+      { icon: 'servicefill', name: '人才招聘', id: '9', color: '#89B03E' },
+      { icon: 'full', name: '渠道合作', id: '10', color: '#CC3A7E' },
+      { icon: 'hotfill', name: '学习运营', id: '11', color: '#C48B25' },
+    ]
   },
   globalData: {
     userInfo: null

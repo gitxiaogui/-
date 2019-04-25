@@ -5,7 +5,14 @@ Page({
     tabList: ['关注', '热门', '附近', '新秀'],
     wxImg: '',
     focusList: [],
-    hotList: []
+    hotList: [],
+    imgList: [
+      'http://img.17kuxiu.com/banner/banner20190313154655.jpg',
+      'http://img.17kuxiu.com/banner/banner20190409101131.png',
+      'http://img.17kuxiu.com/banner/banner20190409101131.png',
+      'http://img.17kuxiu.com/banner/banner20190321151811.jpg',
+      'http://img.17kuxiu.com/banner/banner20190312192438.png',
+    ]
   },
   onLoad: function (options) {
     this.getFocusList()

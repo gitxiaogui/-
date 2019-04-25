@@ -5,26 +5,46 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    list: []
+    list: [],
+    needList: []
   },
   onShow(){
-    this.onQuery()
+    //this.onQuery()
+    this.getList()
   }, 
-  onQuery(){
+//   onQuery(){
+//     const db = wx.cloud.database()
+//     db.collection('focusList').where({}).get({
+//       success: res=>{
+//         console.log('成功',res)
+//         this.setData({
+//           list: res.data
+//         })  
+//       },
+//       fail: err=>{
+//         wx.showLoading({
+//           title: '获取失败',
+//         })
+//       }
+//     })
+//  },
+  getList() {
     const db = wx.cloud.database()
-    db.collection('focusList').where({}).get({
-      success: res=>{
-        console.log('成功',res)
+    db.collection('needList').where({
+    }).get({
+      success: res => {
+        console.log('获取需求列表成功', res)
         this.setData({
-          list: res.data
-        })  
+          needList: res.data
+        })
       },
-      fail: err=>{
-        wx.showLoading({
+      fail: err => {
+        console.log('获取失败', err)
+        wx.showToast({
           title: '获取失败',
         })
       }
     })
- },
+  },
  
 })

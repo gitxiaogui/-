@@ -1,13 +1,44 @@
 /* miniprogram/pages/user/user.wxss */
-.showImg{
-  height:100rpx;
-  width:100rpx;
+#user .userTop{
+  height:400rpx;
+  background: #388AF0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
 }
-.updataImg{
-  position: relative;
+#user .userTop image{
+  height:140rpx;
+  width:140rpx;
+  border-radius: 50%;
+  margin-top:100rpx;
+  margin-bottom:10rpx;
 }
-.updataImg .uploader__input{
-  position: absolute;
-  height:100%;
+#user .userTop text{
+  color:#fff;
+  font-size:36rpx;
+}
+#user .list{
+  display: flex;
+  align-items: center;
+  padding:0 20rpx 0 10rpx;
+  height:80rpx;
+  background:#fff;
+}
+#user .list text{
+  padding:10rpx;
+  font-size:46rpx;
+  color:#388AF0;
+}
+#user .list view{
+  line-height: 80rpx;
   width:100%;
+  border-bottom:1px solid #ccc;
+}
+#user .borderNone view{
+  border:none;
+}
+#user .marginTop{
+  margin-top:30rpx;
+  border-top:1rpx solid #aaa;
 }

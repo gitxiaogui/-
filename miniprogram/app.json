@@ -3,7 +3,12 @@
     "pages/login/login",
     "pages/index/index",
     "pages/home/home",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/need/need",
+    "pages/need/issueNeed/issueNeed",
+    "pages/need/issueSuccess/issueSuccess",
+    "pages/user/addHome/addHome",
+    "pages/user/myNeed/myNeed"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,6 +30,12 @@
       {
         "pagePath": "pages/index/index",
         "text": "列 表",
+        "iconPath": "/images/tab/component.png",
+        "selectedIconPath": "/images/tab/component_cur.png"
+      },
+      {
+        "pagePath": "pages/need/need",
+        "text": "需 求",
         "iconPath": "/images/tab/component.png",
         "selectedIconPath": "/images/tab/component_cur.png"
       },

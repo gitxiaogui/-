@@ -1,0 +1,77 @@
+#issueForm{
+margin-top:20rpx;
+padding:0 10rpx;
+}
+.inputWrap{
+  padding:20rpx 15rpx 0;
+  background: #fff;
+  margin-bottom:20rpx;
+}
+#issueForm .inputWrap .hintTitle{
+  height:70rpx;
+  display: flex;
+  align-items: center;
+}
+#issueForm .hintTitle .hint{
+  height:32rpx;
+  width:10rpx;
+  background: #2A7CDF;
+  display: inline-block;
+}
+#issueForm .hintTitle .title{
+  font-size:30rpx;
+  margin-left:10rpx;
+  font-weight: bold;
+}
+#issueForm .input{
+  padding:0 20rpx;
+}
+#issueForm .input text{
+  color:#aaa;
+  font-size:24rpx;
+}
+#issueForm .input input{
+  border-bottom:1px solid #ccc;
+  padding-bottom:4rpx;
+  margin-top:16rpx;
+}
+#issueForm  .checkboxBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+#issueForm .checkbox{
+  width:33.3%;
+  margin-top:30rpx;
+}
+#issueForm checkbox .wx-checkbox-input{
+border-radius: 3rpx;
+height: 30rpx;
+width: 30rpx;
+margin-top: -4rpx;
+}
+#issueForm .checkbox checkbox{
+  height: 30rpx;
+  width: 40rpx;
+}
+#issueForm .cu-form-group{
+  margin:0;
+  height:80rpx;
+  min-height:80rpx;
+  padding:0;
+}
+#issueForm  .cu-form-textarea{
+  padding:0;
+  overflow-y: auto;
+  height:130rpx;
+  min-height: 130rpx;
+}
+#issueForm .inputWrapUser{
+  margin-top:20rpx;
+}
+#issueForm .input .inputCon{
+  margin:0;
+}
+#issueForm .padding .kong{
+  border:1px solid #0081FF;
+  color:#0081FF;
+}
